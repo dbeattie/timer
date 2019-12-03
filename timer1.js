@@ -1,11 +1,16 @@
-// ALARM CLOCK 
-const data = process.argv
-let number = data.slice(2).filter(function(number){return number > -1});
-const timer = function(number) {
- for (const num of number) {
+// ALARM CLOCK
+const data = process.argv.slice(2);
+let numbers = data.filter(number => {
+  return number > 0;
+});
+
+const timer = function() {
+  for (const num of numbers) {
     setTimeout(() => {
-    console.log('beep');  
+      console.log('BEEP!');
+      return process.stdout.write('\x07');
     }, num * 1000);
+  }
 };
-};
-timer(number);
+
+timer(numbers);

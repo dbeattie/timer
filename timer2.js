@@ -7,6 +7,8 @@
 //...at which point the program should say... 
 //"Thanks for using me, ciao!" before terminating
 
+//SHOULD CREATE A BEEP: process.stdout.write('\x07');
+
 // ALARM CLOCK VAMPED UP 
 const readline = require('readline');
 const ask = readline.createInterface({
